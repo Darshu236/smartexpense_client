@@ -1,0 +1,54 @@
+:root {
+  --bg-main: #f1f5f9;
+  --bg-navbar: #ffffff;
+  --bg-sidebar: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-hover: #e2e8f0;
+  --text-main: #1e293b;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --bg-main: #0f172a;
+  --bg-navbar: #1e293b;
+  --bg-sidebar: #1e293b;
+  --bg-card: #334155;
+  --bg-hover: #475569;
+  --text-main: #f8fafc;
+  --shadow: rgba(255, 255, 255, 0.15);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 220px;
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  padding: 24px;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

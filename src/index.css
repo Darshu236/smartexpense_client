@@ -1,0 +1,55 @@
+/* index.css or App.css */
+
+:root {
+  /* Light theme variables */
+  --bg-main: #f1f5f9;
+  --bg-navbar: #ffffff;
+  --bg-sidebar: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-hover: #e2e8f0;
+  --text-main: #1e293b;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  /* Dark theme overrides */
+  --bg-main: #0f172a;
+  --bg-navbar: #1e293b;
+  --bg-sidebar: #1e293b;
+  --bg-card: #334155;
+  --bg-hover: #475569;
+  --text-main: #f8fafc;
+  --shadow: rgba(255, 255, 255, 0.15);
+}
+
+/* Optional: reset body */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+body { font-family: Inter, Arial, sans-serif; margin: 0; padding: 0; background:#f5f7fb; color:#222; }
+.split-expense-container { display:flex; justify-content:center; padding:20px; }
+.split-expense-card { background:white; width:900px; border-radius:10px; padding:20px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+.header { display:flex; align-items:center; gap:12px; }
+.header-icon { font-size:28px; }
+.header-title { margin:0; }
+.form { margin-top:16px; }
+.form-group { margin-bottom:12px; }
+.form-label { display:block; margin-bottom:6px; font-weight:600; color:#333; }
+.form-input { padding:8px 10px; border-radius:6px; border:1px solid #ddd; width:100%; box-sizing:border-box; }
+.amount-input-container { display:flex; align-items:center; gap:8px; }
+.currency-symbol { font-weight:700; }
+.friends-grid { display:flex; flex-wrap:wrap; gap:8px; }
+.friend-card { display:flex; align-items:center; gap:8px; padding:8px 10px; border-radius:8px; border:1px solid #eee; cursor:pointer; width: 200px; }
+.friend-card.selected { background:#eef6ff; border-color:#cde7ff; }
+.friend-avatar { width:36px; height:36px; background:#ddd; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; }
+.friend-avatar.small { width:28px; height:28px; font-size:13px; }
+.custom-split-row { display:flex; justify-content:space-between; align-items:center; padding:6px 0; }
+.submit-button { background:#0165ff; color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; }
+.message { margin-top:12px; padding:10px; border-radius:8px; display:flex; gap:10px; align-items:center; }
+.message.success { background:#e6f9ed; border:1px solid #bfeacb; color:#0b6a2c; }
+.message.error { background:#fff2f2; border:1px solid #ffcccc; color:#8b1b1b; }
+.message.info { background:#eef6ff; border:1px solid #cfe8ff; color:#164e8b; }
+.split-summary { margin-top:12px; padding:10px; border-radius:8px; background:#fafafa; border:1px solid #f0f0f0; }

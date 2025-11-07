@@ -1,0 +1,74 @@
+/* DashboardCards.css */
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.card {
+  flex: 1 1 calc(33.33% - 20px);
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.card.prediction {
+  background: #f5faff;
+}
+
+.card.alert {
+  background: #fff3f3;
+  color: #c0392b;
+}
+
+.card.score {
+  background: #f3fff3;
+  color: #27ae60;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+.progress-bar {
+  height: 18px;
+  background-color: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+}

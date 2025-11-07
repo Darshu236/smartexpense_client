@@ -1,0 +1,481 @@
+/* Register.css - Clean styling for registration component */
+
+.register-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Steps */
+.progress-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.progress-step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.progress-step.pending {
+  background-color: #e9ecef;
+  color: #6c757d;
+}
+
+.progress-step.current {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.progress-step.completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.progress-line {
+  width: 50px;
+  height: 2px;
+  margin: 0 10px;
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+.progress-line.completed {
+  background-color: #28a745;
+}
+
+/* Step Content */
+.step-content {
+  text-align: left;
+}
+
+.step-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Messages */
+.message {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.message.info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.message.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-group input.error {
+  border-color: #dc3545;
+}
+
+.form-group input.error:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-group input:disabled {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* User ID Preview */
+.userid-preview {
+  margin-top: 8px;
+}
+
+.userid-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.userid-label {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.userid-value {
+  color: #007bff;
+}
+
+.check-availability-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.check-availability-btn:hover:not(:disabled) {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.check-availability-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.availability-status {
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+.availability-status.available {
+  color: #28a745;
+}
+
+.availability-status.unavailable {
+  color: #dc3545;
+}
+
+/* Buttons */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.submit-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.submit-btn.primary {
+  background-color: #28a745;
+}
+
+.submit-btn.primary:hover:not(:disabled) {
+  background-color: #1e7e34;
+}
+
+.back-btn {
+  flex: 1;
+  padding: 12px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover:not(:disabled) {
+  background-color: #545b62;
+}
+
+.back-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.button-group .submit-btn {
+  flex: 2;
+}
+
+.resend-btn {
+  background: transparent;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.resend-btn:hover {
+  color: #0056b3;
+}
+
+/* Verification Step Specific */
+.verification-step {
+  text-align: center;
+}
+
+.verification-info {
+  margin-bottom: 20px;
+}
+
+.phone-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.verification-info p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.verification-input {
+  text-align: center !important;
+  font-size: 20px !important;
+  letter-spacing: 0.1em;
+}
+
+/* Success Step Specific */
+.success-step {
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.success-title {
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.success-description {
+  color: #6c757d;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.dashboard-btn {
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dashboard-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Auth Footer */
+.auth-footer {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.auth-footer p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.auth-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .register-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .progress-steps {
+    margin-bottom: 20px;
+  }
+  
+  .progress-step {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+  
+  .progress-line {
+    width: 30px;
+    margin: 0 5px;
+  }
+  
+  .step-title {
+    font-size: 20px;
+  }
+  
+  .userid-display {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .button-group .submit-btn,
+  .button-group .back-btn {
+    flex: none;
+  }
+}
+
+/* Loading States */
+.submit-btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submit-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Focus visible for accessibility */
+.submit-btn:focus-visible,
+.back-btn:focus-visible,
+.dashboard-btn:focus-visible,
+.check-availability-btn:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .progress-step.pending {
+    border: 2px solid #6c757d;
+  }
+  
+  .progress-step.current {
+    border: 2px solid #007bff;
+  }
+  
+  .progress-step.completed {
+    border: 2px solid #28a745;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .progress-step,
+  .progress-line,
+  .form-group input,
+  .submit-btn,
+  .back-btn,
+  .dashboard-btn,
+  .check-availability-btn,
+  .auth-link {
+    transition: none;
+  }
+  
+  .submit-btn.loading::after {
+    animation: none;
+  }
+}

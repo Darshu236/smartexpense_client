@@ -1,0 +1,24 @@
+/* src/theme.css */
+
+/* Root defaults */
+:root {
+  --bg-main: #0f172a;
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --text-main: #ffffff;
+  --accent: #00e5ff;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+.light {
+  --bg-main: #f3f4f6;
+  --bg-card: #ffffff;
+  --text-main: #1f2937;
+  --accent: #3b82f6;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
